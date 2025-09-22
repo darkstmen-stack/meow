@@ -2,7 +2,7 @@
 <html lang="ar" dir="rtl">
 <head>
   <meta charset="UTF-8">
-  <title>موقع الفيديو مع نافذة Terminal</title>
+  <title>love u</title>
   <style>
 html, body {
   margin: 0;
@@ -16,7 +16,7 @@ html, body {
   align-items: center;
   background: black;
   font-family: monospace;
-  padding-top: 50px; /* لإبعاد المحتوى عن الأعلى */
+  padding-top: 50px; 
 }
 
 canvas {
@@ -28,24 +28,22 @@ canvas {
   z-index: -1;
 }
 
-/* الفيديو */
 video {
-  width: 25%;           /* حجم صغير متوسط */
+  width: 25%;          
   height: auto;
-  border: 2px solid #fff;  /* إطار أبيض */
+  border: 2px solid #fff; 
   border-radius: 15px;
   box-shadow: 0 0 15px #ffffff55;
   z-index: 1;
   margin-bottom: 25px;
 }
 
-/* الطرفية */
 .terminal-box {
   width: 45%;
   max-width: 450px;
   background: rgba(0, 30, 0, 0.85); 
   border-radius: 10px;
-  border: 2px solid #fff;   /* إطار أبيض */
+  border: 2px solid #fff;   
   box-shadow: 0 0 12px #ffffff88;
   color: #00ff77;
   padding: 12px;
@@ -59,12 +57,11 @@ video {
   position: relative;
 }
 
-/* مربع المعلومات */
 .info-box {
   width: 45%;
   max-width: 450px;
   padding: 12px 18px;
-  border: 2px solid #fff;  /* إطار أبيض */
+  border: 2px solid #fff;  
   border-radius: 12px;
   box-shadow: 0 0 10px #ffffff55;
   color: #ffffff;
@@ -80,15 +77,12 @@ video {
 </head>
 <body>
 
-  <!-- خلفية النجوم -->
   <canvas id="stars"></canvas>
 
-  <!-- الفيديو -->
   <video id="bgVideo" autoplay loop playsinline>
-    <source src="videos/myvideo.mp4" type="video/mp4">
+    <source src="videos/myvideo(2).mp4" type="video/mp4">
   </video>
 
-  <!-- مربع الطرفية -->
   <div class="terminal-box">
     discord.gg/CX8wFnRsvu
     <br><br>
@@ -98,7 +92,6 @@ video {
     <br>لا اعتد بل ارد العادية
   </div>
 
-  <!-- المربع أسفل الطرفية -->
   <div class="info-box">
     <h3>IP: <span id="ip">...</span></h3>
     <h3>City: <span id="city">...</span></h3>
@@ -111,7 +104,6 @@ video {
   </div>
 
   <script>
-    // تشغيل الفيديو
     const video = document.getElementById('bgVideo');
     video.muted = false;
     video.play().catch(() => {
@@ -123,7 +115,6 @@ video {
       });
     });
 
-    // النجوم
     const canvas = document.getElementById('stars');
     const ctx = canvas.getContext('2d');
     let stars = [];
@@ -161,7 +152,6 @@ video {
     }
     animate();
 
-    // جلب بيانات IP من ipinfo.io
     fetch("https://ipinfo.io/json?token=1e23702ce5b1c3")
       .then(res => res.json())
       .then(data => {
@@ -179,4 +169,5 @@ video {
 
 </body>
 </html>
+
 
